@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                                /* Set the JavaScript language version for emitted JavaScript. */
+    "module": "esnext",                                /* Specify the module system as ESNext for ES modules. */
+    "rootDir": "./src",                                /* Set rootDir to the root of the backend project. */
+    "outDir": "./dist",                                /* Specify an output folder for all emitted files. */
+    "esModuleInterop": true,                           /* Emit additional JavaScript to ease support for importing CommonJS modules. */
+    "forceConsistentCasingInFileNames": true,          /* Ensure that casing is correct in imports. */
+    "skipLibCheck": true,                              /* Skip type checking all .d.ts files. */
+    "strict": false,                                   /* Enable all strict type-checking options. */
+    "noEmitOnError": true,                             /* Disable emitting files if any type checking errors are reported. */
+    "resolveJsonModule": true,                         /* Enable importing .json files. */
+    "moduleResolution": "node",                        /* Use node module resolution strategy. */
+    "allowJs": true,                                   /* Allow JavaScript files to be a part of your program. */
+    "allowSyntheticDefaultImports": true               /* Allow importing CommonJS modules with default imports. */
+  },
+  "include": [
+    "src/**/*",                                        /* Include all files inside the src folder. */
+    "types.d.ts", 
+    "src/**/*"                                         /* Include all files inside the convex folder. */
+  ],
+  "exclude": [
+    "convex/_generated/**/*"                           /* Exclude the generated files in the _generated folder from being compiled. */
+  ]
+}

@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model notes {
+  id        String   @id @default(uuid())
+  title     String
+  googleId  String
+  content   String
+  createdAt DateTime @default(now())
+
+  user      User?    @relation(fields: [googleId], references: [googleId], onDelete: Cascade)
+}
+
+
+model User {
+  id        String     @id @default(uuid())
+  googleId  String  @unique
+  email     String  @unique
+  name      String?
+  avatar    String?
+  notes     notes[]  // Relation to Note model
+}

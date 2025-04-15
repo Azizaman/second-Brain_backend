@@ -7,6 +7,13 @@ declare global {
         originalname: string;
         buffer: Buffer;
       };
+
+
+    }
+    interface Request {
+      isAuthenticated: () => boolean;
+      logout: (callback: (err: Error | null) => void) => void;
+      user?: JwtPayload | string;
     }
   }
 }

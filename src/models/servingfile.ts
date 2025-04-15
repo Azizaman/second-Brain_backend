@@ -1,8 +1,9 @@
 // models/servingfile.ts
 import { MongoClient, GridFSBucket, ObjectId } from 'mongodb';
 import fs from 'fs';
+import dotenv from 'dotenv';
 
-const uri = "mongodb+srv://azizamanaaa97:easypassword@cluster0.tyjfznw.mongodb.net/second-brain";
+const uri = process.env.MONGO_URI;
 const client = new MongoClient(uri);
 
 export default async function downloadFile(fileId: string, destinationPath: string): Promise<void> {

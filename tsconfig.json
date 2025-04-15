@@ -1,25 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es2016",                                /* Set the JavaScript language version for emitted JavaScript. */
-    "module": "esnext",                                /* Specify the module system as ESNext for ES modules. */
-    "rootDir": "./src",                                /* Set rootDir to the root of the backend project. */
-    "outDir": "./dist",                                /* Specify an output folder for all emitted files. */
-    "esModuleInterop": true,                           /* Emit additional JavaScript to ease support for importing CommonJS modules. */
-    "forceConsistentCasingInFileNames": true,          /* Ensure that casing is correct in imports. */
-    "skipLibCheck": true,                              /* Skip type checking all .d.ts files. */
-    "strict": false,                                   /* Enable all strict type-checking options. */
-    "noEmitOnError": true,                             /* Disable emitting files if any type checking errors are reported. */
-    "resolveJsonModule": true,                         /* Enable importing .json files. */
-    "moduleResolution": "node",                        /* Use node module resolution strategy. */
-    "allowJs": true,                                   /* Allow JavaScript files to be a part of your program. */
-    "allowSyntheticDefaultImports": true               /* Allow importing CommonJS modules with default imports. */
+    "target": "ES2016",                                /* Set the JavaScript language version for emitted JavaScript. */
+    "module": "ESNext",                                /* Use ESNext module system for modern imports/exports. */
+    "rootDir": "./src",                                /* Set rootDir to the source folder. */
+    "outDir": "./dist",                                /* Specify the output folder for emitted files. */
+    "esModuleInterop": true,                           /* Enable interoperability for CommonJS modules. */
+    "forceConsistentCasingInFileNames": true,          /* Ensure consistent casing in module imports. */
+    "skipLibCheck": true,                              /* Skip type checking for declaration files. */
+    "strict": false,                                   /* Disable strict type checking. */
+    "noEmitOnError": true,                             /* Prevent emitting files if errors exist. */
+    "resolveJsonModule": true,                         /* Enable importing JSON files. */
+    "moduleResolution": "node",                        /* Use Node.js module resolution strategy. */
+    "allowJs": true,                                   /* Allow using JavaScript files. */
+    "allowSyntheticDefaultImports": true               /* Support default imports from CommonJS modules. */
   },
   "include": [
-    "src/**/*",                                        /* Include all files inside the src folder. */
-    "types.d.ts", 
-    "src/**/*"                                         /* Include all files inside the convex folder. */
+    "src/**/*",                                        /* Include all TypeScript files in src folder. */
+    "types.d.ts"                                       /* Include global type declarations. */
   ],
   "exclude": [
-    "convex/_generated/**/*"                           /* Exclude the generated files in the _generated folder from being compiled. */
+    "node_modules",                                    /* Exclude the node_modules folder. */
+    "convex/_generated/**/*"                           /* Exclude generated files from Convex. */
   ]
 }

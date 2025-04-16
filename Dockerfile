@@ -22,6 +22,9 @@ RUN npx prisma generate
 # Build TypeScript code
 RUN npm run build
 
+# Debug: List contents of /app and /app/dist to verify build output
+RUN ls -la /app && ls -la /app/dist
+
 # Expose the port the app runs on
 EXPOSE 5000
 
